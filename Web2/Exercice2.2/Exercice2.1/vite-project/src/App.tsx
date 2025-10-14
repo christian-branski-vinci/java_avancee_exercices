@@ -4,14 +4,16 @@ interface CinemaProps {
   movie2: Movie;
 }
 
-interface PageTitleProps {
-  title: string;
-}
-
 interface Movie {
   title: string;
   director: string;
 }
+
+interface PageTitleProps {
+  title: string;
+}
+
+
 
 const App = () => {
   const pageTitle = "Informations sur les films dans les cinémas";
@@ -22,33 +24,45 @@ const App = () => {
     title: "HAIKYU-THE DUMPSTER BATTLE",
     director: "Susumu Mitsunaka",
   };
+
   const movie2: Movie = {
-    title: "GOODBYE JULIA ",
-    director: "Mohamed Kordofani",
-  };
+    title: "Tintin et le secret de la licorne",
+    director: "Steven Spielberg"
+  }
 
   const cinema2Name = "UGC Toison d'Or";
-  const movie3 = {
-    title: "THE WATCHERS",
-    director: "Ishana Night Shyamalan",
-  };
-  const movie4 = {
-    title: "BAD BOYS: RIDE OR DIE",
-    director: "Adil El Arbi, Bilall Fallah",
-  };
+
+  const movie3: Movie = {
+    title: "The lady vanishes",
+    director: "Alfred Hitchcock"
+  }
+
+  const movie4: Movie = {
+    title: "MI: Fallout",
+    director: "Tom Cruise",
+  }
+
 
   return (
     <div>
       <PageTitle title={pageTitle} />
 
-      <Cinema name={cinema1Name} movie1={movie1} movie2={movie2} />
+      <Cinema
+        name={cinema1Name}
+        movie1={movie1}
+        movie2={movie2}
+      />
 
-      <Cinema name={cinema2Name} movie1={movie3} movie2={movie4} />
+      <Cinema
+        name={cinema2Name}
+        movie1={movie3}
+        movie2={movie4}
+      />
     </div>
   );
 };
 
-const PageTitle = (props: PageTitleProps) => {
+const PageTitle = (props:PageTitleProps) => {
   return <h1>{props.title}</h1>;
 };
 
@@ -67,5 +81,7 @@ const Cinema = (props: CinemaProps) => (
     </ul>
   </div>
 );
+
+
 
 export default App;
