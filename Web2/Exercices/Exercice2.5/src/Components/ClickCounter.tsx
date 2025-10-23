@@ -11,7 +11,6 @@ const ClickCounter = ({
     title,
     on10clicks,
     hoverMessage }: ClickCounterProps) => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [count, setCount] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
     return (
