@@ -1,0 +1,15 @@
+.header {
+    background-color: bisque;
+    color: black;
+    text-align: center;
+    padding: 10px;
+
+    display: flex;
+    justify-content: start;
+
+}
+
+.logo {
+    padding: 10px;
+    height: 50px;
+}
